@@ -258,6 +258,27 @@ module.exports = {
           });
           return;
         }
+
+        // Notification Role Toggle Buttons
+        if (customId.startsWith("btn_role_")) {
+          const roleKey = customId.replace("btn_role_", "");
+          const targetRoleId = config.notificationRoles?.[roleKey];
+
+          if (!targetRoleId || !guild.roles.cache.has(targetRoleId)) {
+            await interaction.reply({ content: "❌ Role not found on server.", ephemeral: true });
+            return;
+          }
+
+          const hasRole = member.roles.cache.has(targetRoleId);
+          if (hasRole) {
+            await member.roles.remove(targetRoleId);
+            await interaction.reply({ content: `🔕 Removed <@&${targetRoleId}> from your notifications.`, ephemeral: true });
+          } else {
+            await member.roles.add(targetRoleId);
+            await interaction.reply({ content: `🔔 Added <@&${targetRoleId}> to your notifications!`, ephemeral: true });
+          }
+          return;
+        }
       }
     } catch (err) {
       Logger.error("Error in interactionCreate event:", err);
