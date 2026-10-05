@@ -1,0 +1,150 @@
+{
+  "theme": {
+    "name": "Aura",
+    "networkTitle": "Nocalia Theme Park Network",
+    "primaryColor": "#6C5CE7",
+    "secondaryColor": "#A29BFE",
+    "successColor": "#00B894",
+    "warningColor": "#FDCB6E",
+    "dangerColor": "#D63031",
+    "websiteUrl": "https://nocaliamc.com",
+    "audioPortalUrl": "https://nocaliamc.com/audio",
+    "footerText": "Aura • The Spirit of Nocalia"
+  },
+  "minecraft": {
+    "cacheTtlMs": 30000,
+    "defaultHost": "play.nocaliamc.com",
+    "defaultPort": 28862,
+    "version": "26.2"
+  },
+  "tickets": {
+    "categoryLimit": 1,
+    "categories": [
+      {
+        "id": "support",
+        "label": "General Support & Help",
+        "emoji": "🎫",
+        "description": "Assistance with attractions, audio portal or connection",
+        "prefix": "support-",
+        "categoryId": "1556688508553269258",
+        "allowedRoles": [
+          "1556641807591280740"
+        ],
+        "fields": [
+          {
+            "id": "subject",
+            "label": "Issue Subject",
+            "style": "SHORT",
+            "required": true,
+            "maxLength": 100,
+            "placeholder": "Briefly state your problem or question"
+          },
+          {
+            "id": "details",
+            "label": "Detailed Description",
+            "style": "PARAGRAPH",
+            "required": true,
+            "maxLength": 1000,
+            "placeholder": "Describe what happened, any error messages, park location..."
+          }
+        ]
+      },
+      {
+        "id": "recruitment",
+        "label": "Crew Recruitment",
+        "emoji": "💼",
+        "description": "Apply to join the Nocalia Crew (Builder, Tech, Guide, Dev)",
+        "prefix": "apply-",
+        "categoryId": "1556688508553269258",
+        "allowedRoles": [
+          "1556641807591280740"
+        ],
+        "isRecruitment": true,
+        "fields": [
+          {
+            "id": "role",
+            "label": "Desired Crew Specialty",
+            "style": "SHORT",
+            "required": true,
+            "maxLength": 100,
+            "placeholder": "Builder, Technician, Guide, Developer, Host..."
+          },
+          {
+            "id": "availability",
+            "label": "Age & Weekly Availability",
+            "style": "SHORT",
+            "required": true,
+            "maxLength": 100,
+            "placeholder": "e.g., 18 years old, 10-15h / week"
+          },
+          {
+            "id": "portfolio",
+            "label": "Experience & Motivations / Portfolio",
+            "style": "PARAGRAPH",
+            "required": true,
+            "maxLength": 1000,
+            "placeholder": "Tell us why you want to join the Nocalia Crew and share your work..."
+          }
+        ]
+      },
+      {
+        "id": "report",
+        "label": "Bug Report or Rule Violation",
+        "emoji": "🛡️",
+        "description": "Report a technical glitch, park bug, or player misconduct",
+        "prefix": "report-",
+        "categoryId": "1556688508553269258",
+        "allowedRoles": [
+          "1556641807591280740"
+        ],
+        "fields": [
+          {
+            "id": "target",
+            "label": "Player Name or Attraction Name",
+            "style": "SHORT",
+            "required": true,
+            "maxLength": 100,
+            "placeholder": "Nickname or ride involved"
+          },
+          {
+            "id": "incident",
+            "label": "Incident Details & Evidence",
+            "style": "PARAGRAPH",
+            "required": true,
+            "maxLength": 1000,
+            "placeholder": "What happened? Include screenshots or clip links if available..."
+          }
+        ]
+      },
+      {
+        "id": "commercial",
+        "label": "Media & Partnerships",
+        "emoji": "🤝",
+        "description": "Media, content creators (YouTube/Twitch), press inquiries and collaborations",
+        "prefix": "partner-",
+        "categoryId": "1556688508553269258",
+        "allowedRoles": [
+          "1556641807591280740"
+        ],
+        "fields": [
+          {
+            "id": "organization",
+            "label": "Channel or Media Name",
+            "style": "SHORT",
+            "required": true,
+            "maxLength": 100,
+            "placeholder": "YouTube, Twitch, organization or project name"
+          },
+          {
+            "id": "pitch",
+            "label": "Proposal & Media Collaboration Idea",
+            "style": "PARAGRAPH",
+            "required": true,
+            "maxLength": 1000,
+            "placeholder": "Explain your proposal, audience size, and collaboration ideas..."
+          }
+        ]
+      }
+    ]
+  }
+}
