@@ -2,6 +2,7 @@ const { Client, Collection, GatewayIntentBits, Partials } = require("discord.js"
 const Logger = require("./Logger");
 const minecraftService = require("./MinecraftService");
 const ticketService = require("./TicketService");
+const statsService = require("./StatsService");
 
 class NocaliaClient extends Client {
   constructor() {
@@ -23,6 +24,7 @@ class NocaliaClient extends Client {
     this.commands = new Collection();
     this.minecraft = minecraftService;
     this.tickets = ticketService;
+    this.stats = statsService;
   }
 
   async start() {

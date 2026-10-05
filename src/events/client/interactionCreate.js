@@ -72,9 +72,9 @@ module.exports = {
         return;
       }
 
-      // 4. Buttons (Tickets, Claim, Close, Recruitment, Giveaway)
+      // 4. Buttons (Tickets, Claim, Close, Recruitment, Giveaway, Roles)
       if (interaction.isButton()) {
-        const { customId, member, channel, user } = interaction;
+        const { customId, member, channel, user, guild } = interaction;
 
         // Close ticket button
         if (customId === "btn_ticket_close") {

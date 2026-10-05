@@ -16,6 +16,9 @@ module.exports = {
     // Register & sync slash commands
     await loadCommands(client);
 
+    // Initialize live stats counters
+    client.stats.init(client);
+
     // Rotating presence status
     const activities = [
       { name: "play.nocaliamc.com", type: ActivityType.Playing },
